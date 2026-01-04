@@ -11,7 +11,8 @@ import Ignite
 struct DataStorage {
     let cons: [Connection] = [
         Connection(id: 0, text: "GitHub", link: "https://github.com/ameliashe", color: Color(hex: "#104C35")),
-        Connection(id: 1, text: "Instagram", link: "https://www.instagram.com/elllle_rom/", color: .indianRed)
+        Connection(id: 1, text: "Instagram", link: "https://www.instagram.com/elllle_rom/", color: .indianRed),
+		Connection(id: 2, text: "Email", link: "mailto:amelia@ameliashe.com", color: .tan)
     ]
     
     

@@ -38,7 +38,7 @@ struct Home: StaticPage {
                     
                     Spacer(size: 15)
                     
-                    HStack {
+					HStack {
                         ForEach(cons) { con in
                             
                             LinkGroup(target: con.link) {
@@ -116,7 +116,7 @@ struct Home: StaticPage {
                                     .background(ColorManager.shared.color(for: item))
                                     .padding(.horizontal, 7)
                                     .padding(.vertical, 2)
-                                    .cornerRadius(10)
+                                    .cornerRadius(6)
                             }
                         }
                     }
