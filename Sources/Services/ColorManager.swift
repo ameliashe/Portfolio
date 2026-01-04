@@ -8,7 +8,6 @@
 import Ignite
 
 final class ColorManager {
-    static let shared = ColorManager()
     
     func color(for stack: String) -> Color {
         
