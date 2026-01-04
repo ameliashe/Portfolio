@@ -19,6 +19,7 @@ struct ExampleSite: Site {
     var titleSuffix = ""
     var url = URL(static: "https://www.ameliashe.com")
     var builtInIconsEnabled = true
+	var favicon: URL? = URL(static: "/images/favicon.ico")
 
     var author = "Ameliia Shekikhacheva"
 

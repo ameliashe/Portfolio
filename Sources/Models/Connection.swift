@@ -8,8 +8,7 @@
 import Foundation
 import Ignite
 
-struct Connection: Identifiable {
-    let id: Int
+struct Connection {
     let text: String
     let link: String
     let color: Color

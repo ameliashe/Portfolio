@@ -3,7 +3,7 @@ import Ignite
 
 
 struct Home: StaticPage {
-    var title = "Home"
+    var title = "Amelia – iOS developer"
     var cons = DataStorage().cons
     var projects = DataStorage().projects
     
@@ -20,7 +20,7 @@ struct Home: StaticPage {
                 
                 VStack (alignment: .leading) {
                     Text("Ameliia Shekikhacheva")
-                        .font(.title2)
+                        .font(.title1)
                         .fontWeight(.black)
                     
                     CodeBlock(.swift) {
@@ -38,7 +38,7 @@ struct Home: StaticPage {
                     
                     Spacer(size: 15)
                     
-					HStack {
+					HStack(spacing: 6) {
                         ForEach(cons) { con in
                             
                             LinkGroup(target: con.link) {

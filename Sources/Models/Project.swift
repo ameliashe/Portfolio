@@ -7,6 +7,12 @@
 
 import Foundation
 
+enum Hosting: CaseIterable {
+	case github
+	case appstore
+	case none
+}
+
 struct Project {
     let logoImage: String
     let title: String
@@ -14,5 +20,5 @@ struct Project {
     let stack: [String]
     let link: String
     let screenshot: String
-    let isAppStore: Bool
+    let hosting: Hosting
 }
