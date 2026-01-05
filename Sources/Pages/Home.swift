@@ -10,57 +10,78 @@ struct Home: StaticPage {
     var body: some HTML {
         
         VStack (alignment: .center){
-            HStack {
-                Image("/images/profile.jpg", description: "Amelia's Photo")
-                    .resizable()
-                    .width(4)
-                    .frame(maxWidth: 320)
-                    .cornerRadius(30)
-                    .margin(.horizontal, 4)
-                
-                VStack (alignment: .leading) {
-                    Text("Ameliia Shekikhacheva")
-                        .font(.title1)
-                        .fontWeight(.black)
-                    
-                    CodeBlock(.swift) {
-                """
-                 struct AboutMe {
-                     let role =  "iOS Developer"
-                     var tech =  "Swift * UIKit * SwiftUI"
-                     var city =  "Amsterdam, The Netherlands"
-                 }
-                """
-                    }
-                    .frame(minWidth: 470)
-                    .cornerRadius(10)
-                    .margin(.top, 20)
-                    
-                    Spacer(size: 15)
-                    
-					HStack(spacing: 6) {
-                        ForEach(cons) { con in
-                            
-                            LinkGroup(target: con.link) {
-                                Text(con.text)
-                                    .fontWeight(.bold)
-                                    .foregroundStyle(.white)
-                                    .background(con.color)
-                                    .padding(.horizontal, 10)
-                                    .padding(.vertical, 5)
-                                    .cornerRadius(10)
-                                    .hoverEffect { effect in
-                                        effect
-                                            .background(.blue.opacity(0.3))
-                                    }
-                            }
-                        }
-                    }
+			
+			//MARK: - Profile Header
+            Grid {
+                Column {
+                	Image("/images/profile.jpg", description: "Amelia's Photo")
+						.resizable()
+						.frame(maxWidth: 320)
+						.cornerRadius(30)
+						.margin(.horizontal, 4)
+						
                 }
+				.columnSpan(1)
+				
+                
+                Column {
+                	VStack (alignment: .leading) {
+						Text("Amelia Shekikhacheva")
+							.font(.title1)
+							.fontWeight(.black)
+						
+						CodeBlock(.swift) {
+					"""
+					 struct AboutMe {
+						 let role =  "iOS Developer"
+						 var tech =  "Swift * UIKit * SwiftUI"
+						 var city =  "Paris, France"
+					 }
+					"""
+						}
+						.frame(minWidth: 470)
+						.cornerRadius(10)
+						.margin(.top, 20)
+						
+						Spacer(size: 15)
+						
+						HStack(spacing: 6) {
+							ForEach(cons) { con in
+								
+								LinkGroup(target: con.link) {
+									Text(con.text)
+										.fontWeight(.bold)
+										.foregroundStyle(.white)
+										.background(con.color)
+										.padding(.horizontal, 10)
+										.padding(.vertical, 5)
+										.cornerRadius(10)
+										.hoverEffect { effect in
+											effect
+												.background(.blue.opacity(0.3))
+										}
+								}
+							}
+						}
+					}
+                }
+				.columnSpan(1)
             }
         }
-        .margin(.vertical, 50)
+		.margin(.bottom, 30)
+		
+		//MARK: - Description
+		VStack (alignment: .center){
+			HStack {
+				Text(markdown: DataStorage().profileDescription)
+					.font(.lead)
+			}
+//			.margin(.vertical, 50)
+			.frame(maxWidth: 800)
+		}
         
+		
+		//MARK: - Projects
         Text("Projects")
             .font(.title2)
             .fontWeight(.black)
@@ -102,7 +123,7 @@ struct Home: StaticPage {
 
                         Spacer(size: 4)
                         
-                        Text(project.description)
+						Text(markdown: project.description)
                             .font(.body)
                             .opacity(0.7)
                         
@@ -121,7 +142,7 @@ struct Home: StaticPage {
                         }
                     }
                 }
-                .frame(width: 800)
+                .frame(maxWidth: 800)
                 .padding(20)
                 .background(Color.black.opacity(0.1))
                 .cornerRadius(14)
