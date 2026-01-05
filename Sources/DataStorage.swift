@@ -11,13 +11,13 @@ import Ignite
 struct DataStorage {
 	var profileDescription: String {
 		"""
-		Hi, I’m Amelia — an iOS & macOS developer.
+		Hi, I’m Amelia — an iOS & macOS developer 👩🏻‍💻
 
 		I build thoughtful, performance-minded apps in **Swift** using **SwiftUI** and **UIKit**. I enjoy clean architecture (MVVM), data modeling and persistence (**Core Data / SwiftData**), and turning complex logic into calm, readable UI.
 
 		Also I work as a **video editor & motion designer** in esports/media production. This background shaped how I approach products: strong visual taste, clear storytelling, and an eye for detail. I also hold a bachelor’s degree in **Economics & Management** (UNE​CON, Saint Petersburg) and completed a postgraduate program in film editing at **Industry** film school.
 
-		If you’d like to chat about collaboration or roles, feel free to reach out.
+		If you’d like to chat about collaboration or roles, feel free to reach out✨
 		"""
 	}
 	
