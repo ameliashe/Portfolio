@@ -13,11 +13,13 @@ struct DataStorage {
 		"""
 		Hi, I’m Amelia — an iOS & macOS developer 👩🏻‍💻
 
-		I build thoughtful, performance-minded apps in **Swift** using **SwiftUI** and **UIKit**. I enjoy clean architecture (MVVM), data modeling and persistence (**Core Data / SwiftData**), and turning complex logic into calm, readable UI.
+		I build thoughtful, performance-minded apps in **Swift** with **SwiftUI** and **UIKit**, focusing on clean architecture, reliability, visual style and a calm, readable UI. I work confidently with Apple's native frameworks, such as Core Data / SwiftData, URLSession, Combine, GCD & Swift Concurrency, and I am used to testing and profiling using XCTest and Xcode Instruments. I am also proficient in working with third-party tools that include Realm, Firebase, Alamofire and SnapKit.
 
-		Also I work as a **video editor & motion designer** in esports/media production. This background shaped how I approach products: strong visual taste, clear storytelling, and an eye for detail. I also hold a bachelor’s degree in **Economics & Management** (UNE​CON, Saint Petersburg) and completed a postgraduate program in film editing at **Industry** film school.
+		I approach development with strong product thinking: understanding user needs, iterating on feedback, and delivering features that enhance the user experience without compromising app performance. 
 
-		If you’d like to chat about collaboration or roles, feel free to reach out✨
+		Alongside development, I work as a **video editor & motion designer** in esports/media production. This background sharpened my visual taste, storytelling, and attention to detail. I hold a bachelor’s degree in **Economics & Management** (UNE​CON, Saint Petersburg) and completed a postgraduate program in film editing at **Industry** film school.
+
+		If you’d like to chat about collaboration or roles, feel free to reach out ✨
 		"""
 	}
 	
